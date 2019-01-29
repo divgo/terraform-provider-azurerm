@@ -228,7 +228,7 @@ func resourceArmAppServicePlanRead(d *schema.ResourceData, meta interface{}) err
 	log.Printf("[DEBUG] Reading Azure App Service Plan %s", id)
 
 	resourceGroup := id.ResourceGroup
-	name := id.Path["serverfarms"]
+	name := id.Path["serverFarms"]
 
 	ctx := meta.(*ArmClient).StopContext
 	resp, err := client.Get(ctx, resourceGroup, name)
